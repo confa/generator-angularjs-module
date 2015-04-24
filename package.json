@@ -1,0 +1,19 @@
+{
+  "name": "generator-module",
+  "version": "0.1.0",
+  "description": "Yeoman angular-module generator",
+  "files": [
+    "app"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Kirill Buga",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^0.19.2"
+  }
+}
