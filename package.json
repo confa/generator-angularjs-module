@@ -1,5 +1,5 @@
 {
-  "name": "generator-module",
+  "name": "generator-angularjs-module",
   "version": "0.1.0",
   "description": "Yeoman angular-module generator",
   "files": [
