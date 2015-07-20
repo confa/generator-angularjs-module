@@ -1,9 +1,6 @@
-var <%= name %> = <%= name %> || angular.module('<%= name %>', []);
+'use strict';
 
-(function () {
-	'use strict';
-	<%= name %>
-		controller('<%= name %>Ctrl', ['$scope', function($scope){
-			
-		}]);
-})(); 
+angular.module('<%= name %>')
+	controller('<%= name %>Ctrl', function <%= camelName%>Ctrl() {
+
+	});

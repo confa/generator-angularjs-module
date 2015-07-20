@@ -25,6 +25,7 @@ module.exports = yeoman.generators.Base.extend({
     this.prompt(prompts, function (props) {
       this.name = props.name;
       this.path = props.path;
+      this.camelName = this.name.charAt(0).toUpperCase() + this.name.slice(1);
       done();
     }.bind(this));
   },
@@ -32,11 +33,11 @@ module.exports = yeoman.generators.Base.extend({
   app: function () {
     this.config.save();
 
-    this.template('template.html', path.join(process.cwd(), this.path, this.name + '.html'));
-    this.template('service.js', path.join(process.cwd(), this.path, this.name + 'Service.js'));
-    this.template('controller.js', path.join(process.cwd(), this.path, this.name + 'Сontroller.js'));
-    this.template('directive.js', path.join(process.cwd(), this.path, this.name + 'Directive.js'));
-    this.template('styles.less', path.join(process.cwd(), this.path, this.name + '.less'));
+    this.template('template.jade', path.join(process.cwd(), this.path, this.name + '.jade'));
+    this.template('service.js', path.join(process.cwd(), this.path, this.name + '.service.js'));
+    this.template('controller.js', path.join(process.cwd(), this.path, this.name + '.сontroller.js'));
+    this.template('directive.js', path.join(process.cwd(), this.path, this.name + '.directive.js'));
+    this.template('styles.styl', path.join(process.cwd(), this.path, this.name + '.styl'));
     this.template('spec.js', path.join(process.cwd(), this.path, this.name + '.spec.js'));
   }
 

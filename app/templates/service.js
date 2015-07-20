@@ -1,11 +1,8 @@
-var <%= name %> = <%= name %> || angular.module('<%= name %>', []);
+'use strict';
 
-(function () {
-	'use strict';
-	<%= name %>
-		.service('<%= name %>Service', [function(){
-			return {
+angular.module('<%= name %>')
+	.service('<%= name %>Service', function <%= camelName%>Service() {
+		return {
 
-			};
-		}]);
-})(); 
+		};
+	});
