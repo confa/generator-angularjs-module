@@ -1,6 +1,6 @@
 {
   "name": "generator-ng-module-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman angular-module generator",
   "files": [
     "app"
