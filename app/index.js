@@ -19,13 +19,14 @@ module.exports = yeoman.generators.Base.extend({
     },{
       name: 'path',
       message: 'Where I should put it?',
-      default: '/'
+      default: process.cwd()
     }];
 
     this.prompt(prompts, function (props) {
       this.name = props.name;
       this.path = props.path;
       this.camelName = this.name.charAt(0).toUpperCase() + this.name.slice(1);
+      this.templatesDir = process.cwd().slice(process.cwd().indexOf('src/app'));
       done();
     }.bind(this));
   },
@@ -35,6 +36,7 @@ module.exports = yeoman.generators.Base.extend({
 
     this.template('template.jade', path.join(process.cwd(), this.path, this.name + '.jade'));
     this.template('service.js', path.join(process.cwd(), this.path, this.name + '.service.js'));
+    this.template('module.js', path.join(process.cwd(), this.path, this.name + '.module.js'));
     this.template('controller.js', path.join(process.cwd(), this.path, this.name + '.сontroller.js'));
     this.template('directive.js', path.join(process.cwd(), this.path, this.name + '.directive.js'));
     this.template('styles.styl', path.join(process.cwd(), this.path, this.name + '.styl'));
